@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Hello World Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="display">
+                <div class="animated-heading">
+                    <h1>The message for you is: <span id="words">Message 1</span></h1>
+                </div>
+                <button onclick="window.location.href='index.html'">Home Page</button>
+            </div>
+        </div class="container">
+
+        <script type="text/javascript">
+            (function () {
+              var words = ["Message 1","Another Message 1","Message 2","ABCDEF","And again ..." ],
+              i = 0;
+              setInterval(function(){ $('#words').fadeOut(function(){
+                  $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+                }); }, 2000)
+            })();
+        </script>
+    </body>
+
+</html>

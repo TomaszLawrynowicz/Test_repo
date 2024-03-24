@@ -14,6 +14,7 @@
             <div id="display">
                 <h1 id="text">Access Denied!</h1>
                 <h2 id="text2">You are not allowed to access this page.</h2>
+                <h2 id="text3">IP</h2>
                 <button onclick="window.location.href='index.html'">Home Page</button>
             </div>
         </div class="container">
@@ -21,7 +22,7 @@
             var userIPAddress = window.location.hostname;
             var lastIndex=userIPAddress.lastIndexOf(".");
             var userIPAddressRange = userIPAddress.slice(0,lastIndex);
-            document.getElementById("text2").innerHTML = userIPAddress;
+            document.getElementById("text3").innerHTML = userIPAddress;
         </script>
     </body>
 
