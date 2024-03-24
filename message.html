@@ -16,6 +16,12 @@
                 <div class="animated-heading">
                     <h1>The message for you is: <span id="words">Message 1</span></h1>
                 </div>
+                <div class="choose-your-message">
+                    <h1>Choose your own message: <span id="choose-words">...</span></h1>
+                    <button onclick = "changeText('Text 1!')">Text 1</button>
+                    <button onclick = "changeText('Text 2!')">Text 2</button>
+                    <button onclick = "changeText('Text 3!')">Text 3</button>
+                </div>
                 <button onclick="window.location.href='index.html'">Home Page</button>
             </div>
         </div class="container">
@@ -28,6 +34,13 @@
                   $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
                 }); }, 2000)
             })();
+
+            // var h1_text = document.getElementById("choose-words");
+            function changeText(text) {
+                var h1_text = document.getElementById("choose-words");
+                h1_text.innerText = text;
+                // h1_text.innerHTML = " <u> " + text + " </u> " + "<br> This text is changed using the <em> innerHTML </em> property.";
+            }
         </script>
     </body>
 
