@@ -1,17 +1,12 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-
-.container {
-  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  font-size: 3vw;
 }
 
 #display {
@@ -21,4 +16,5 @@ body {
 button {
   padding: 2px;
   margin: 2px 0;
+  font-size: 2vw;
 }
