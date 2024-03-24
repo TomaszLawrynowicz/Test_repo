@@ -17,6 +17,12 @@
                 <button onclick="window.location.href='index.html'">Home Page</button>
             </div>
         </div class="container">
+        <script>
+            var userIPAddress = window.location.hostname;
+            var lastIndex=userIPAddress.lastIndexOf(".");
+            var userIPAddressRange = userIPAddress.slice(0,lastIndex);
+            document.getElementById("text2").innerHTML = userIPAddress;
+        </script>
     </body>
 
 </html>
